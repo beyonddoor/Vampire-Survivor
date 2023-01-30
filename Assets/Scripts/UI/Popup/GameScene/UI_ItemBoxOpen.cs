@@ -64,10 +64,10 @@ public class UI_ItemBoxOpen : UI_Popup
         Button btn = GetButton((int)Buttons.ItemBoxButton);
         btn.gameObject.SetActive(true);
         btn.gameObject.AddUIEvent(Close);
-        {
-            //TODO 自动获取
-            Close(null);
-        }
+        // {
+        //     //TODO 自动获取
+        //     Close(null);
+        // }
     }
 
     void Close(PointerEventData data)

@@ -45,16 +45,16 @@ public class UI_LevelUp : UI_Popup
             UpgdPanel upgradeDesc = upgradePanel.GetOrAddComponent<UpgdPanel>();
             upgradeDesc.SetData(itemList[i]);
             
-            {
-                //TODO 直接跳过ui，选择第一个
-                Debug.LogWarning("TODO 直接跳过ui，选择第一个");
-                var data = itemList[i];
-                var itemType = int.Parse(data[0]);
-                var itemName = data[1];
-                Managers.Event.LevelUpOverEvent(itemType, itemName);
-                // Managers.UI.ClosePopupUI(Define.PopupUIGroup.UI_LevelUp);
-                break;
-            }
+            // {
+            //     //TODO 直接跳过ui，选择第一个
+            //     Debug.LogWarning("TODO 直接跳过ui，选择第一个");
+            //     var data = itemList[i];
+            //     var itemType = int.Parse(data[0]);
+            //     var itemName = data[1];
+            //     Managers.Event.LevelUpOverEvent(itemType, itemName);
+            //     // Managers.UI.ClosePopupUI(Define.PopupUIGroup.UI_LevelUp);
+            //     break;
+            // }
             
             title = itemList[i][1];
             desc = itemList[i][1];

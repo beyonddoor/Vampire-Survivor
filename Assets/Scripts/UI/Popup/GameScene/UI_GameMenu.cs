@@ -95,7 +95,6 @@ public class UI_GameMenu : UI_Popup
 
     public void OnValueChanged()
     {
-        
         Managers.Sound.Play(((Define.BGMs)BGMdropdown.value).ToString(), Define.Sound.Bgm);
     }
 }
