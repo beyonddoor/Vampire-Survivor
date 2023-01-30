@@ -17,6 +17,24 @@ public class GameScene : BaseScene
         player.GetOrAddComponent<PlayerController>().Init(Managers.Game.StartPlayer);
         Camera.main.gameObject.GetOrAddComponent<CameraController>().SetPlayer(player);
         Managers.Resource.Instantiate("Content/Grid");
+
+        {
+            var playerStat = player.GetComponent<PlayerStat>();
+            var weapons = new List<Define.Weapons>()
+            {
+                Define.Weapons.Knife,
+                Define.Weapons.Fireball,
+                Define.Weapons.Spin,
+                Define.Weapons.Poison,
+                Define.Weapons.Lightning,
+                Define.Weapons.Shotgun,
+            };
+            //TODO 
+            foreach(Define.Weapons weaponType in weapons)
+            {
+                playerStat.AddOrSetWeaponDict(weaponType, 1);
+            }
+        }
     }
     private void Update()
     {

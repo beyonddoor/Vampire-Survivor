@@ -126,6 +126,11 @@ public class EventManager
 
     public void LevelUpEvent()
     {
+        {
+            //TODO ignore LevelUpEvent()
+            Debug.Log("//TODO ignore LevelUpEvent()");
+            return;
+        }
         Managers.UI.ShowPopupUI<UI_LevelUp>();
         Managers.GamePause();
     }

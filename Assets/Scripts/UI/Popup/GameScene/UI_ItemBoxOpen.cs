@@ -38,6 +38,10 @@ public class UI_ItemBoxOpen : UI_Popup
         Bind<Button>(typeof(Buttons));
 
         GetImage((int)Images.BackgroundImg).gameObject.AddUIEvent(OnOpenChest);
+        {
+            //自动打开
+            OnOpenChest(null);
+        }
     }
 
     void OnOpenChest(PointerEventData data)
@@ -60,6 +64,10 @@ public class UI_ItemBoxOpen : UI_Popup
         Button btn = GetButton((int)Buttons.ItemBoxButton);
         btn.gameObject.SetActive(true);
         btn.gameObject.AddUIEvent(Close);
+        {
+            //TODO 自动获取
+            Close(null);
+        }
     }
 
     void Close(PointerEventData data)

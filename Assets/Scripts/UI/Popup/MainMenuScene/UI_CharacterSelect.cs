@@ -72,6 +72,11 @@ public class UI_CharacterSelect : UI_Popup
         OnClickUpdate(playerGOList[0], playerGOList[0].GetComponent<PlayerInven>().player);
 
         GetButton((int)Buttons.StartButton).gameObject.AddUIEvent(OnClickStartGame);
+
+        {
+            //TODO 
+            OnClickStartGame(null);
+        }
         
     }
 
