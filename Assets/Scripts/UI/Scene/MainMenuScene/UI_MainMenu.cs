@@ -52,8 +52,8 @@ public class UI_MainMenu : UI_Scene
         GetButton((int)Buttons.GameExitButton).gameObject.AddUIEvent(ExitGame);
 
         // SetAnimationOver(new PointerEventData(EventSystem.current));
-        Managers.UI.ClosePopupUI(Define.PopupUIGroup.UI_GameMenu);
-        Managers.UI.ShowPopupUI<UI_CharacterSelect>();
+        // Managers.UI.ClosePopupUI(Define.PopupUIGroup.UI_GameMenu);
+        // Managers.UI.ShowPopupUI<UI_CharacterSelect>();
     }
 
     void SetAnimationOver(PointerEventData data)
